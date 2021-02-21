@@ -25,9 +25,9 @@ Router::addGroup('/', function () {
  * proxy
  */
 Router::addGroup('/', function () {
-    Router::get('proxy-request', 'App\Controller\ProxyController@request');
-    Router::get('proxy-auth', 'App\Controller\ProxyController@auth');
-    Router::get('proxy-login', 'App\Controller\ProxyController@login');
+    Router::post('proxy-request', 'App\Controller\ProxyController@request');
+    Router::post('proxy-auth', 'App\Controller\ProxyController@auth');
+    Router::post('proxy-login', 'App\Controller\ProxyController@login');
 });
 
 Router::get('/favicon.ico', function () {
