@@ -13,6 +13,7 @@
     "license": "Apache-2.0",
     "require": {
         "php": ">=7.3",
+        "my/proxy": "dev-master",
         "hyperf/cache": "~2.1.0",
         "hyperf/command": "~2.1.0",
         "hyperf/config": "~2.1.0",
@@ -73,5 +74,11 @@
             "Composer\\Config::disableProcessTimeout",
             "php ./bin/hyperf.php start"
         ]
+    },
+    "repositories": {
+        "my/proxy": {
+            "type": "path",
+            "url": "/Volumes/Code/myproxy"
+        }
     }
 }
