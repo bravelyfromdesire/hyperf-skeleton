@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use My\Proxy\Client;
 use My\Proxy\Request;
+use Hyperf\Di\Annotation\Inject;
 
 class ProxyController extends AbstractController
 {
