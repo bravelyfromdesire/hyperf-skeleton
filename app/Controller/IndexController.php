@@ -11,8 +11,18 @@ declare(strict_types=1);
  */
 namespace App\Controller;
 
+use My\Proxy\Client;
+use My\Proxy\Request;
+use Hyperf\Di\Annotation\Inject;
+
 class IndexController extends AbstractController
 {
+    /**
+     * @Inject
+     * @var Client
+     */
+    protected $client;
+
     public function index()
     {
         $user = $this->request->input('user', 'Hyperf');
@@ -22,5 +32,20 @@ class IndexController extends AbstractController
             'method' => $method,
             'message' => "Hello {$user}.",
         ];
+    }
+
+    public function request()
+    {
+        return $this->client->send(new Request);
+    }
+
+    public function auth()
+    {
+
+    }
+
+    public function login()
+    {
+
     }
 }
